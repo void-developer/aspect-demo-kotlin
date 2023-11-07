@@ -5,9 +5,8 @@ import org.springframework.stereotype.Service
 
 @Service
 class AspectService {
-
-    @MetricAnnotation
-    fun randomFunction(): String {
-        return "Hello Aspect"
-    }
+  @MetricAnnotation
+  fun randomFunction(): String {
+    return "Hello Aspect"
+  }
 }
