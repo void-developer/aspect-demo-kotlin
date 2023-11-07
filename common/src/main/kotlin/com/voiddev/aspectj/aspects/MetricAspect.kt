@@ -5,8 +5,7 @@ import org.aspectj.lang.annotation.Aspect
 
 @Aspect
 class MetricAspect {
-
-    @After("@annotation(metricAnnotation)")
+  @After("@annotation(metricAnnotation) && execution(* *(..))")
     fun after(metricAnnotation: MetricAnnotation) {
         println("MetricAspect: ${metricAnnotation.javaClass.simpleName}")
     }
